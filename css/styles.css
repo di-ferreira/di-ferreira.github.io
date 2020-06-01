@@ -75,10 +75,33 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.navigation .menu {
+  display: flex;
+  flex: 1;
+  height: 55px;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+}
+.navigation .menu ul {
+  list-style: none;
+}
+.navigation .menu ul li {
+  display: inline-flex;
+}
+.navigation .menu ul li a {
+  color: #f8f8f2;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+}
+.navigation .menu ul li a:hover {
+  color: #f1fa8c;
+}
 
 /* Logo */
 .brand {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   font-family: "Operator";
   font-style: oblique;
   font-feature-settings: "liga";

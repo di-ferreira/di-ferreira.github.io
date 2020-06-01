@@ -92,10 +92,34 @@ body {
     justify-content: space-between;
     align-items: center;
   }
+
+  .menu {
+    display: flex;
+    flex: 1;
+    height: 55px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    ul {
+      list-style: none;
+      li {
+        display: inline-flex;
+        a {
+          color: $cForeground;
+          text-decoration: none;
+          display: block;
+          padding: 0.5rem;
+          &:hover {
+            color: $cYellow;
+          }
+        }
+      }
+    }
+  }
 }
 /* Logo */
 .brand {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   font-family: $base-font-display;
   font-style: oblique;
   font-feature-settings: "liga";

@@ -65,38 +65,42 @@ body {
 /* navigation */
 .navigation {
   position: fixed;
+  z-index: 1000;
   display: flex;
   width: 100%;
   height: 55px;
-  background: #242530;
+  background: #1f212a;
   justify-content: center;
 }
 .navigation .wrapper {
   justify-content: space-between;
   align-items: center;
+  padding: 0 15px;
 }
-.navigation .menu {
+.navigation_menu {
   display: flex;
   flex: 1;
   height: 55px;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 10px;
 }
-.navigation .menu ul {
+.navigation_list {
   list-style: none;
 }
-.navigation .menu ul li {
+.navigation_item {
   display: inline-flex;
 }
-.navigation .menu ul li a {
+.navigation_link {
   color: #f8f8f2;
   text-decoration: none;
   display: block;
   padding: 0.5rem;
 }
-.navigation .menu ul li a:hover {
+.navigation_link:hover {
   color: #f1fa8c;
+}
+.navigation_checkbox, .navigation_button {
+  display: none;
 }
 
 /* Logo */
@@ -119,16 +123,143 @@ body {
 
 @media (max-width: 600px) {
   .navigation {
-    background: #242530;
-  }
-  .navigation .menu {
-    display: none;
+    position: relative;
   }
   .navigation .wrapper {
-    justify-content: center;
+    justify-content: space-between;
   }
   .navigation .brand {
     font-size: 3rem;
+    margin-left: 15px;
+  }
+  .navigation_list {
+    background: #1f212a;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    padding-top: 7.5rem;
+    height: 0rem;
+    overflow: hidden;
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    -o-transition: height 0.5s;
+  }
+  .navigation_button {
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+  .navigation_icon {
+    position: relative;
+  }
+  .navigation_icon, .navigation_icon::before, .navigation_icon::after {
+    width: 2.5rem;
+    height: 2px;
+    background: #f8f8f2;
+    display: inline-flex;
+  }
+  .navigation_icon::before, .navigation_icon::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+  }
+  .navigation_icon::before {
+    top: -0.8rem;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+  }
+  .navigation_icon::after {
+    top: 0.8rem;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+  }
+  .navigation_checkbox:checked + .navigation_button {
+    transform: rotate(-180deg);
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+  }
+  .navigation_checkbox:checked + .navigation_button .navigation_icon {
+    background-color: transparent;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+  }
+  .navigation_checkbox:checked + .navigation_button .navigation_icon::before {
+    top: 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+  }
+  .navigation_checkbox:checked + .navigation_button .navigation_icon::after {
+    top: 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+  }
+  .navigation_checkbox:checked ~ .navigation_list {
+    height: 25rem;
+  }
+  .navigation_item {
+    font-size: 2.5rem;
   }
 }
 

@@ -82,39 +82,44 @@ body {
 /* navigation */
 .navigation {
   position: fixed;
+  z-index: 1000;
   display: flex;
   width: 100%;
   height: 55px;
-  background: darken($cBackground, 2);
+  background: darken($cBackground, 4);
   justify-content: center;
 
   .wrapper {
     justify-content: space-between;
     align-items: center;
+    padding: 0 15px;
   }
 
-  .menu {
+  &_menu {
     display: flex;
     flex: 1;
     height: 55px;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 10px;
-    ul {
-      list-style: none;
-      li {
-        display: inline-flex;
-        a {
-          color: $cForeground;
-          text-decoration: none;
-          display: block;
-          padding: 0.5rem;
-          &:hover {
-            color: $cYellow;
-          }
-        }
-      }
+  }
+  &_list {
+    list-style: none;
+  }
+  &_item {
+    display: inline-flex;
+  }
+  &_link {
+    color: $cForeground;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    &:hover {
+      color: $cYellow;
     }
+  }
+  &_checkbox,
+  &_button {
+    display: none;
   }
 }
 /* Logo */
@@ -137,15 +142,150 @@ body {
 
 @media (max-width: 600px) {
   .navigation {
-    .menu {
-      display: none;
-    }
+    position: relative;
     .wrapper {
-      justify-content: center;
+      justify-content: space-between;
     }
+
     .brand {
       font-size: 3rem;
+      margin-left: 15px;
     }
-    background: darken($cBackground, 2);
+    &_list {
+      background: darken($cBackground, 4);
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      align-items: center;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+      padding-top: 7.5rem;
+      height: 0rem;
+      overflow: hidden;
+      transition: height 0.5s;
+      -webkit-transition: height 0.5s;
+      -moz-transition: height 0.5s;
+      -ms-transition: height 0.5s;
+      -o-transition: height 0.5s;
+    }
+    &_button {
+      display: flex;
+      width: 5rem;
+      height: 5rem;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(180deg);
+      transition: transform 0.5s;
+      -webkit-transition: transform 0.5s;
+      -moz-transition: transform 0.5s;
+      -ms-transition: transform 0.5s;
+      -o-transition: transform 0.5s;
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+    }
+    &_icon {
+      position: relative;
+      &,
+      &::before,
+      &::after {
+        width: 2.5rem;
+        height: 2px;
+        background: $cForeground;
+        display: inline-flex;
+      }
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+      }
+      &::before {
+        top: -0.8rem;
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transition: transform 0.5s;
+        -webkit-transition: transform 0.5s;
+        -moz-transition: transform 0.5s;
+        -ms-transition: transform 0.5s;
+        -o-transition: transform 0.5s;
+      }
+      &::after {
+        top: 0.8rem;
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transition: transform 0.5s;
+        -webkit-transition: transform 0.5s;
+        -moz-transition: transform 0.5s;
+        -ms-transition: transform 0.5s;
+        -o-transition: transform 0.5s;
+      }
+    }
+
+    &_checkbox:checked + &_button {
+      transform: rotate(-180deg);
+      transition: transform 0.5s;
+      -webkit-transition: transform 0.5s;
+      -moz-transition: transform 0.5s;
+      -ms-transition: transform 0.5s;
+      -o-transition: transform 0.5s;
+      -webkit-transform: rotate(-180deg);
+      -moz-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+    }
+
+    &_checkbox:checked + &_button &_icon {
+      background-color: transparent;
+      transition: transform 0.5s;
+      -webkit-transition: transform 0.5s;
+      -moz-transition: transform 0.5s;
+      -ms-transition: transform 0.5s;
+      -o-transition: transform 0.5s;
+    }
+
+    &_checkbox:checked + &_button &_icon::before {
+      top: 0;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transition: transform 0.5s;
+      -webkit-transition: transform 0.5s;
+      -moz-transition: transform 0.5s;
+      -ms-transition: transform 0.5s;
+      -o-transition: transform 0.5s;
+    }
+
+    &_checkbox:checked + &_button &_icon::after {
+      top: 0;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transition: transform 0.5s;
+      -webkit-transition: transform 0.5s;
+      -moz-transition: transform 0.5s;
+      -ms-transition: transform 0.5s;
+      -o-transition: transform 0.5s;
+    }
+    &_checkbox:checked ~ &_list {
+      height: 25rem;
+    }
+    &_item {
+      font-size: 2.5rem;
+    }
   }
 }

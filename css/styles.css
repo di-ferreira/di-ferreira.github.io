@@ -1,0 +1,112 @@
+/* imports */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+@font-face {
+  font-family: "Operator";
+  src: url("./fonts/Operator-Medium-Regular.otf") format("otf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Operator";
+  src: url("./fonts/Operator-Medium-Italic.otf") format("otf");
+  font-weight: 500;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "Operator";
+  src: url("./fonts/Operator-Ligth-Regular.otf") format("otf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Operator";
+  src: url("./fonts/Operator-Ligth-Italic.otf") format("otf");
+  font-weight: 300;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "Operator";
+  src: url("./fonts/Operator-Bold-Regular.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Operator";
+  src: url("./fonts/Operator-Bold-Italic.otf") format("otf");
+  font-weight: 700;
+  font-style: oblique;
+}
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  background: #282a36;
+}
+
+/* /reset */
+.wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* navigation */
+.navigation {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 55px;
+  background: #242530;
+  justify-content: center;
+}
+.navigation .wrapper {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.brand {
+  font-size: 2.5rem;
+  font-family: "Operator";
+  font-style: oblique;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+  -o-font-feature-settings: "liga";
+  color: #bd93f9;
+}
+.brand span {
+  color: #f8f8f2;
+}
+.brand strong {
+  color: #50fa7b;
+}
+
+@media (max-width: 600px) {
+  .navigation {
+    background: #242530;
+  }
+  .navigation .menu {
+    display: none;
+  }
+  .navigation .wrapper {
+    justify-content: center;
+  }
+  .navigation .brand {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

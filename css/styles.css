@@ -38,26 +38,15 @@
   font-style: oblique;
 }
 @-webkit-keyframes blink {
-  0%, 50%, 100% {
-    opacity: 1;
-  }
-  25%, 75% {
-    opacity: 0;
+  50% {
+    border: none;
   }
 }
 @keyframes blink {
-  0%, 50%, 100% {
-    opacity: 1;
-  }
-  25%, 75% {
-    opacity: 0;
+  50% {
+    border: none;
   }
 }
-.blink {
-  -webkit-animation: blink 1.5s infinite both;
-  animation: blink 1.5s infinite both;
-}
-
 /* reset */
 * {
   padding: 0;
@@ -290,6 +279,62 @@ body {
     font-size: 2.5rem;
   }
 }
+@-webkit-keyframes blink {
+  50% {
+    border: none;
+  }
+}
+@keyframes blink {
+  50% {
+    border: none;
+  }
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15rem solid #f8f8f2;
+  }
+  100% {
+    border: none;
+  }
+}
+@-webkit-keyframes typing {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    opacity: 1;
+    border-right: 0.15rem solid #f8f8f2;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+@keyframes typing2 {
+  0% {
+    width: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes typing2 {
+  0% {
+    width: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header {
   display: flex;
   justify-content: center;
@@ -343,7 +388,6 @@ body {
 .terminal_body {
   color: #f8f8f2;
   padding: 10px;
-  line-height: 1.4;
 }
 .terminal_body .green {
   color: #50fa7b;
@@ -353,6 +397,27 @@ body {
 }
 .terminal_body .pink {
   color: #ff79c6;
+}
+.terminal_body p {
+  line-height: 1.4;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15rem solid #f8f8f2;
+}
+.terminal_body p:nth-child(1) {
+  width: 30rem;
+  animation: typing 3s steps(38);
+  -webkit-animation: typing 3s steps(38);
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+.terminal_body p:nth-child(2) {
+  width: 2rem;
+  opacity: 0;
+  animation: typing2 0.5s steps(2) 3s 1 normal, blink 1s infinite both;
+  -webkit-animation: typing2 0.5s steps(2) 3s 1 normal, blink 1s infinite both;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 @media (max-width: 768px) {

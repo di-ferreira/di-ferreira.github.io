@@ -303,7 +303,7 @@ body {
   flex-direction: column;
   width: 100%;
   max-width: 500px;
-  height: 300px;
+  height: calc(500px/ 1.5);
   background: rgba(40, 42, 54, 0.9);
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -353,6 +353,17 @@ body {
 }
 .terminal_body .pink {
   color: #ff79c6;
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .terminal {
+    height: calc(500px/ 2);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

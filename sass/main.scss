@@ -1,83 +1,8 @@
 /* imports */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
-
-//typography
-@font-face {
-  font-family: "Operator";
-  src: url("./fonts/Operator-Medium-Regular.otf") format("otf");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Operator";
-  src: url("./fonts/Operator-Medium-Italic.otf") format("otf");
-  font-weight: 500;
-  font-style: oblique;
-}
-@font-face {
-  font-family: "Operator";
-  src: url("./fonts/Operator-Ligth-Regular.otf") format("otf");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Operator";
-  src: url("./fonts/Operator-Ligth-Italic.otf") format("otf");
-  font-weight: 300;
-  font-style: oblique;
-}
-@font-face {
-  font-family: "Operator";
-  src: url("./fonts/Operator-Bold-Regular.otf") format("otf");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Operator";
-  src: url("./fonts/Operator-Bold-Italic.otf") format("otf");
-  font-weight: 700;
-  font-style: oblique;
-}
-
-$base-font-display: "Operator";
-$base-font-sans-serif: "Roboto", sans-serif;
-$base-font-serif: "Noto Serif", serif;
-
-// color palette
-$cBackground: #282a36;
-$cForeground: #f8f8f2;
-$cGreen: #50fa7b;
-$cOrange: #ffb86c;
-$cPink: #ff79c6;
-$cPurple: #bd93f9;
-$cRed: #ff5555;
-$cYellow: #f1fa8c;
-
-/* reset */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  line-height: 1;
-}
-
-html {
-  font-size: 62.5%;
-}
-body {
-  font-family: $base-font-sans-serif;
-  font-size: 1.6rem;
-  background: $cBackground;
-}
-
-/* /reset */
-
-.wrapper {
-  display: flex;
-  width: 100%;
-  max-width: 1000px;
-}
+@import "base/base";
+@import "base/typography";
+@import "variables/colors";
+@import "components/brand";
 
 /* navigation */
 .navigation {
@@ -122,23 +47,6 @@ body {
     display: none;
   }
 }
-/* Logo */
-.brand {
-  font-size: 3.2rem;
-  font-family: $base-font-display;
-  font-style: oblique;
-  font-feature-settings: "liga";
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga";
-  -o-font-feature-settings: "liga";
-  color: $cPurple;
-  span {
-    color: $cForeground;
-  }
-  strong {
-    color: $cGreen;
-  }
-}
 
 @media (max-width: 768px) {
   .navigation {
@@ -146,11 +54,6 @@ body {
     padding-top: 15px;
     .wrapper {
       justify-content: space-between;
-    }
-
-    .brand {
-      font-size: 3rem;
-      margin-left: 15px;
     }
     &_list {
       background: darken($cBackground, 4);

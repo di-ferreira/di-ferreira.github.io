@@ -1,5 +1,6 @@
 @import "../variables/typography";
 @import "../variables/colors";
+@import "../animations/blink";
 
 /* reset */
 * {
@@ -22,4 +23,10 @@ body {
   display: flex;
   width: 100%;
   max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 15px;
+  }
 }

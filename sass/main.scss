@@ -5,10 +5,9 @@
 @import "components/navigation";
 @import "components/header";
 @import "components/about";
-
-.services {
-  display: none;
-}
+@import "components/services";
+@import "components/titleSection";
+@import "components/social_links";
 
 .portfolio {
   display: none;

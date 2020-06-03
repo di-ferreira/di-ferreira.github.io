@@ -1,7 +1,26 @@
+@import "../mixin/base";
+
 .about {
-  display: flex;
-  width: 100%;
-  justify-content: center;
+  @include defaultSectionRules();
   &_profile {
+    width: 50%;
+    img {
+      width: 80%;
+      padding: 1rem;
+      border-top: solid 2px $cRed;
+      border-left: solid 2px $cRed;
+    }
+  }
+  &_text {
+    width: 50%;
+    padding-top: 2.5rem;
+    margin-left: -7%;
+    color: $cYellow;
+    font-family: $base-font-serif;
+    p {
+      margin-bottom: 2rem;
+      letter-spacing: 0.1rem;
+      line-height: 1.5;
+    }
   }
 }

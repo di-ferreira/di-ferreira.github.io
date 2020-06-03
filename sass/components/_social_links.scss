@@ -1,0 +1,12 @@
+.social_links {
+  a {
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  img {
+    width: 4rem;
+    margin-right: 2rem;
+  }
+}

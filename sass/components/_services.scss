@@ -1,0 +1,6 @@
+@import "../mixin/base";
+
+.services {
+  @include defaultSectionRules();
+  background: $cForeground;
+}

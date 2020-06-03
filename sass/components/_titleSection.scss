@@ -1,0 +1,16 @@
+.titleSection {
+  &_dark {
+    color: $cForeground;
+    font-size: 3rem;
+    font-family: $base-font-sans-serif;
+    letter-spacing: 0.4rem;
+    margin-bottom: 10px;
+  }
+  &_light {
+    color: $cBackground;
+    font-size: 3rem;
+    font-family: $base-font-sans-serif;
+    letter-spacing: 0.4rem;
+    margin-bottom: 10px;
+  }
+}

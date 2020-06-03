@@ -1,12 +1,12 @@
+@import "../mixin/base";
+
 /* navigation */
 .navigation {
+  @include defaultSectionRules();
   position: fixed;
   z-index: 1000;
-  display: flex;
-  width: 100%;
   height: 55px;
   background: darken($cBackground, 4);
-  justify-content: center;
 
   .wrapper {
     justify-content: space-between;

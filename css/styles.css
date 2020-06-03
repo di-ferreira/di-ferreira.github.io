@@ -111,7 +111,7 @@ video {
 .navigation {
   display: flex;
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 0 30px 0;
   justify-content: center;
   position: fixed;
   z-index: 1000;
@@ -441,7 +441,7 @@ video {
 .about {
   display: flex;
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 0 30px 0;
   justify-content: center;
 }
 .about_profile {
@@ -458,22 +458,112 @@ video {
   padding-top: 2.5rem;
   margin-left: -7%;
   color: #f1fa8c;
-  font-family: "Noto Serif", serif;
 }
 .about_text p {
   margin-bottom: 2rem;
   letter-spacing: 0.1rem;
   line-height: 1.5;
+  padding-left: 1rem;
+  word-wrap: break-word;
 }
 
+@media (max-width: 768px) {
+  .about_profile, .about_text {
+    width: 100%;
+  }
+  .about_profile img {
+    width: 100%;
+  }
+  .about_text {
+    margin-left: 0;
+  }
+  .about .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .services {
   display: flex;
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 0 30px 0;
   justify-content: center;
   background: #f8f8f2;
 }
+.services_myServices {
+  width: 50%;
+  margin-bottom: 3rem;
+  padding-right: 2rem;
+}
+.services_myServices_service {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.services_myServices_service:first-of-type {
+  margin-top: 2.5rem;
+}
+.services_myServices_service_title {
+  display: flex;
+  align-items: center;
+  font-size: 2.2rem;
+  color: #3e4153;
+  letter-spacing: 1px;
+}
+.services_myServices_service_title img {
+  margin-right: 1rem;
+}
+.services_myServices_service_text {
+  margin-top: 1rem;
+}
+.services_skills {
+  width: 50%;
+}
+.services_skills_text {
+  margin-top: 3rem;
+}
+.services_skills_text, .services_skills_list {
+  padding-left: 1rem;
+}
+.services_skills_list {
+  margin-top: 2rem;
+  list-style: none;
+}
+.services_skills_list_item {
+  display: flex;
+  flex-direction: column;
+  background: rgba(40, 42, 54, 0.1);
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 2.5rem;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.services_skills_list_item_text {
+  display: flex;
+  align-items: center;
+  background: #ffb86c;
+  height: 100%;
+  padding-left: 1.5rem;
+  color: #f8f8f2;
+  width: 100%;
+}
 
+@media (max-width: 768px) {
+  .services_myServices, .services_skills {
+    width: 100%;
+  }
+  .services_myServices_service {
+    padding-left: 1rem;
+    width: 100%;
+  }
+  .services .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .titleSection_dark {
   color: #f8f8f2;
   font-size: 3rem;
@@ -489,6 +579,9 @@ video {
   margin-bottom: 10px;
 }
 
+.social_links {
+  display: flex;
+}
 .social_links a {
   opacity: 0.7;
 }
@@ -500,6 +593,18 @@ video {
   margin-right: 2rem;
 }
 
+@media (max-width: 768px) {
+  .social_links {
+    justify-content: center;
+  }
+  .social_links a {
+    opacity: 1;
+  }
+  .social_links img {
+    width: 4rem;
+    margin-right: 2rem;
+  }
+}
 .portfolio {
   display: none;
 }

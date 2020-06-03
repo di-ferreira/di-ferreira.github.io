@@ -5,6 +5,7 @@
   @include defaultSectionRules();
   position: fixed;
   z-index: 1000;
+  padding: 0;
   height: 55px;
   background: darken($cBackground, 4);
 
@@ -45,7 +46,7 @@
 @media (max-width: 768px) {
   .navigation {
     position: relative;
-    padding-top: 15px;
+
     .wrapper {
       justify-content: space-between;
     }

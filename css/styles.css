@@ -65,6 +65,12 @@ body {
   background: #282a36;
 }
 
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 .wrapper {
   display: flex;
   width: 100%;
@@ -429,6 +435,26 @@ body {
   .terminal {
     height: calc(500px/ 2);
   }
+}
+.about {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.services {
+  display: none;
+}
+
+.portfolio {
+  display: none;
+}
+
+.contact {
+  display: none;
+}
+
+.footer {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

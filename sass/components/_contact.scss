@@ -114,9 +114,11 @@
       width: 100%;
     }
     &_talk {
-      &_send_button {
-        &_style {
-          width: 100%;
+      &_form {
+        &_send_button {
+          &_style {
+            flex: 1;
+          }
         }
       }
     }

@@ -779,8 +779,8 @@ video {
   .contact_talk, .contact_mail {
     width: 100%;
   }
-  .contact_talk_send_button_style {
-    width: 100%;
+  .contact_talk_form_send_button_style {
+    flex: 1;
   }
   .contact_mail {
     margin-top: 2rem;
@@ -812,6 +812,11 @@ video {
   margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  .titleSection_dark, .titleSection_light {
+    height: auto;
+  }
+}
 .social_links {
   display: flex;
 }

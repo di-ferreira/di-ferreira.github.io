@@ -686,7 +686,7 @@ video {
   background: #f8f8f2;
 }
 .contact_talk, .contact_mail {
-  flex: 1;
+  flex: 1 !important;
 }
 .contact_talk {
   display: flex;
@@ -719,6 +719,8 @@ video {
   margin-top: 0.5rem;
   margin-left: 1rem;
   font-size: 1.8rem;
+  font-family: "Operator";
+  font-style: oblique;
 }
 .contact_talk_form_group_control {
   height: 3.5rem;
@@ -734,7 +736,11 @@ video {
   justify-content: flex-end;
 }
 .contact_talk_form_send_button_style {
-  padding: 1rem 1.5rem;
+  display: flex;
+  width: 10rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
   border: none;
   background: #ff5555;
   color: #f8f8f2;
@@ -744,19 +750,50 @@ video {
   -moz-border-radius: 0.3rem;
   -ms-border-radius: 0.3rem;
   -o-border-radius: 0.3rem;
-  transition: box-shadow;
-  -webkit-transition: box-shadow;
-  -moz-transition: box-shadow;
-  -ms-transition: box-shadow;
-  -o-transition: box-shadow;
+  outline-offset: 0;
+  outline: 0;
 }
 .contact_talk_form_send_button_style:hover {
-  box-shadow: 0.1rem 0.2rem 0.3rem rgba(40, 42, 54, 0.5);
+  box-shadow: -0.2rem 0.2rem 0.3rem rgba(40, 42, 54, 0.6);
+  background: #ff4646;
+  transition: background 0.5s, box-shadow 0.5s;
+  -webkit-transition: background 0.5s, box-shadow 0.5s;
+  -moz-transition: background 0.5s, box-shadow 0.5s;
+  -ms-transition: background 0.5s, box-shadow 0.5s;
+  -o-transition: background 0.5s, box-shadow 0.5s;
 }
-.contact_mail {
-  background: green;
+.contact_mail_email,
+.contact_mail .social_links {
+  padding-left: 1rem;
+}
+.contact_mail_email {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-family: "Operator";
+  font-style: oblique;
 }
 
+@media (max-width: 768px) {
+  .contact_talk, .contact_mail {
+    width: 100%;
+  }
+  .contact_talk_send_button_style {
+    width: 100%;
+  }
+  .contact_mail {
+    margin-top: 2rem;
+  }
+  .contact_mail_email,
+.contact_mail .social_links {
+    padding-left: 0;
+  }
+  .contact .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .titleSection_dark, .titleSection_light {
   height: 3.5rem;
 }

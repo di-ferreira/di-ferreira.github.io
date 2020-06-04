@@ -1,4 +1,9 @@
 .titleSection {
+  &_dark,
+  &_light {
+    height: 3.5rem;
+  }
+
   &_dark {
     color: $cForeground;
     font-size: 3rem;

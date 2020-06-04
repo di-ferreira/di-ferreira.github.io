@@ -16,19 +16,22 @@
         margin-top: 2.5rem;
       }
 
-      &_title {
-        display: flex;
-        align-items: center;
-        font-size: 2.2rem;
-        color: lighten($cBackground, 10);
-        letter-spacing: 1px;
-        img {
-          margin-right: 1rem;
-        }
+      &_img {
+        margin-right: 1rem;
       }
 
-      &_text {
-        margin-top: 1rem;
+      &_content {
+        &_title {
+          display: flex;
+          align-items: center;
+          font-size: 2.2rem;
+          color: lighten($cBackground, 10);
+          letter-spacing: 1px;
+        }
+
+        &_text {
+          margin-top: 1rem;
+        }
       }
     }
   }

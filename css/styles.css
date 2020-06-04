@@ -151,9 +151,6 @@ video {
 }
 
 @media (max-width: 768px) {
-  .navigation {
-    position: relative;
-  }
   .navigation .wrapper {
     justify-content: space-between;
   }

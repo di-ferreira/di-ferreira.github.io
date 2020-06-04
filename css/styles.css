@@ -678,6 +678,85 @@ video {
   -o-border-radius: 0.5rem;
 }
 
+.contact {
+  display: flex;
+  width: 100%;
+  padding: 50px 0 30px 0;
+  justify-content: center;
+  background: #f8f8f2;
+}
+.contact_talk, .contact_mail {
+  flex: 1;
+}
+.contact_talk {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+  padding-right: 2rem;
+}
+.contact_talk_form {
+  padding-left: 1rem;
+}
+.contact_talk_form_group_control, .contact_talk_form_group_textArea {
+  width: 100%;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(40, 42, 54, 0.7);
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+.contact_talk_form_group_control:focus, .contact_talk_form_group_textArea:focus {
+  border-color: rgba(255, 85, 85, 0.7);
+  outline: 0;
+  outline-offset: unset;
+}
+.contact_talk_form_group_label {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  font-size: 1.8rem;
+}
+.contact_talk_form_group_control {
+  height: 3.5rem;
+}
+.contact_talk_form_group_textArea {
+  margin-top: 0.5rem;
+  height: 15rem;
+  resize: vertical;
+}
+.contact_talk_form_send_button {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.contact_talk_form_send_button_style {
+  padding: 1rem 1.5rem;
+  border: none;
+  background: #ff5555;
+  color: #f8f8f2;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  transition: box-shadow;
+  -webkit-transition: box-shadow;
+  -moz-transition: box-shadow;
+  -ms-transition: box-shadow;
+  -o-transition: box-shadow;
+}
+.contact_talk_form_send_button_style:hover {
+  box-shadow: 0.1rem 0.2rem 0.3rem rgba(40, 42, 54, 0.5);
+}
+.contact_mail {
+  background: green;
+}
+
 .titleSection_dark, .titleSection_light {
   height: 3.5rem;
 }
@@ -721,9 +800,6 @@ video {
     width: 4rem;
     margin-right: 2rem;
   }
-}
-.contact {
-  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

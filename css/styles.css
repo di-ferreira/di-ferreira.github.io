@@ -497,12 +497,16 @@ video {
 .services_myServices_service {
   margin-bottom: 2rem;
   margin-top: 1rem;
+  display: flex;
 }
 .services_myServices_service:first-of-type {
   margin-top: 2.5rem;
 }
 .services_myServices_service_img {
   margin-right: 1rem;
+}
+.services_myServices_service_content {
+  margin-top: 0.5rem;
 }
 .services_myServices_service_content_title {
   display: flex;

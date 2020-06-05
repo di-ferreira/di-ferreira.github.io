@@ -12,6 +12,7 @@
     &_service {
       margin-bottom: 2rem;
       margin-top: 1rem;
+      display: flex;
       &:first-of-type {
         margin-top: 2.5rem;
       }
@@ -21,6 +22,7 @@
       }
 
       &_content {
+        margin-top: 0.5rem;
         &_title {
           display: flex;
           align-items: center;

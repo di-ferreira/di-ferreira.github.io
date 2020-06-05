@@ -92,12 +92,15 @@ video {
   -webkit-font-feature-settings: "liga";
   -moz-font-feature-settings: "liga";
   -o-font-feature-settings: "liga";
-  color: #bd93f9;
 }
-.brand span {
+.brand a {
+  color: #bd93f9;
+  text-decoration: none;
+}
+.brand a span {
   color: #f8f8f2;
 }
-.brand strong {
+.brand a strong {
   color: #50fa7b;
 }
 
@@ -498,17 +501,17 @@ video {
 .services_myServices_service:first-of-type {
   margin-top: 2.5rem;
 }
-.services_myServices_service_title {
+.services_myServices_service_img {
+  margin-right: 1rem;
+}
+.services_myServices_service_content_title {
   display: flex;
   align-items: center;
   font-size: 2.2rem;
   color: #3e4153;
   letter-spacing: 1px;
 }
-.services_myServices_service_title img {
-  margin-right: 1rem;
-}
-.services_myServices_service_text {
+.services_myServices_service_content_text {
   margin-top: 1rem;
 }
 .services_skills {

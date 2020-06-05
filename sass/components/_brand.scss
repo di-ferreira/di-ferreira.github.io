@@ -7,12 +7,15 @@
   -webkit-font-feature-settings: "liga";
   -moz-font-feature-settings: "liga";
   -o-font-feature-settings: "liga";
-  color: $cPurple;
-  span {
-    color: $cForeground;
-  }
-  strong {
-    color: $cGreen;
+  a {
+    color: $cPurple;
+    text-decoration: none;
+    span {
+      color: $cForeground;
+    }
+    strong {
+      color: $cGreen;
+    }
   }
 }
 @media (max-width: 768px) {

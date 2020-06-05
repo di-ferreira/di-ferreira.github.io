@@ -1,11 +1,11 @@
-@mixin skillAmout($amout, $delay) {
+@mixin skillAmout($amout, $delay, $nChild) {
   width: $amout;
-  animation: scaleWidth 1s ease-out $delay 1 normal;
-  -webkit-animation: scaleWidth 1s ease-out $delay 1 normal;
+  animation: scaleWidth_#{$nChild} 1s ease-out $delay 1 normal;
+  -webkit-animation: scaleWidth_#{$nChild} 1s ease-out $delay 1 normal;
   animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
 
-  @keyframes scaleWidth {
+  @keyframes scaleWidth_#{$nChild} {
     0% {
       width: 0;
       opacity: 0;
@@ -18,7 +18,7 @@
     }
   }
 
-  @-webkit-keyframes scaleWidth {
+  @-webkit-keyframes scaleWidth_#{$nChild} {
     0% {
       width: 0;
       opacity: 0;

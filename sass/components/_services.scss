@@ -53,6 +53,7 @@
       list-style: none;
 
       &_item {
+        position: relative;
         display: flex;
         flex-direction: column;
         background: rgba($cBackground, 0.1);
@@ -66,14 +67,45 @@
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
 
+        &:nth-of-type(1) {
+          @include skillAmout(100%, 1s, 1); /*-- html --*/
+        }
+        &:nth-of-type(2) {
+          @include skillAmout(90%, 1s, 2); /*-- GIT --*/
+        }
+        &:nth-of-type(3) {
+          @include skillAmout(85%, 1s, 3); /*-- Sass --*/
+        }
+        &:nth-of-type(4) {
+          @include skillAmout(85%, 1s, 4); /*-- Bootstrap --*/
+        }
+        &:nth-of-type(5) {
+          @include skillAmout(85%, 1s, 5); /*-- MySql --*/
+        }
+        &:nth-of-type(6) {
+          @include skillAmout(75%, 1s, 6); /*-- PHP --*/
+        }
+        &:nth-of-type(7) {
+          @include skillAmout(75%, 1s, 7); /*-- API Rest --*/
+        }
+        &:nth-of-type(8) {
+          @include skillAmout(70%, 1s, 8); /*-- React --*/
+        }
+        &:nth-of-type(9) {
+          @include skillAmout(70%, 1s, 9); /*-- UX --*/
+        }
+        &:nth-of-type(10) {
+          @include skillAmout(50%, 1s, 10); /*-- Scrum --*/
+        }
+
         &_text {
           display: flex;
           align-items: center;
           background: $cOrange;
+          width: 100%;
           height: 100%;
           padding-left: 1.5rem;
           color: $cForeground;
-          @include skillAmout(100%, 1s);
         }
       }
     }

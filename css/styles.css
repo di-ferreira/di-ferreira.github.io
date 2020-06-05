@@ -532,6 +532,7 @@ video {
   list-style: none;
 }
 .services_skills_list_item {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: rgba(40, 42, 54, 0.1);
@@ -545,42 +546,334 @@ video {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+.services_skills_list_item:nth-of-type(1) {
+  width: 100%;
+  animation: scaleWidth_1 1s ease-out 1s 1 normal;
+  -webkit-animation: scaleWidth_1 1s ease-out 1s 1 normal;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  /*-- html --*/
+}
+@keyframes scaleWidth_1 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes scaleWidth_1 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.services_skills_list_item:nth-of-type(2) {
+  width: 90%;
+  animation: scaleWidth_2 1s ease-out 1s 1 normal;
+  -webkit-animation: scaleWidth_2 1s ease-out 1s 1 normal;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  /*-- GIT --*/
+}
+@keyframes scaleWidth_2 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes scaleWidth_2 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 90%;
+  }
+}
+.services_skills_list_item:nth-of-type(3) {
+  width: 85%;
+  animation: scaleWidth_3 1s ease-out 1s 1 normal;
+  -webkit-animation: scaleWidth_3 1s ease-out 1s 1 normal;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  /*-- Sass --*/
+}
+@keyframes scaleWidth_3 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 85%;
+  }
+}
+@-webkit-keyframes scaleWidth_3 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 85%;
+  }
+}
+.services_skills_list_item:nth-of-type(4) {
+  width: 85%;
+  animation: scaleWidth_4 1s ease-out 1s 1 normal;
+  -webkit-animation: scaleWidth_4 1s ease-out 1s 1 normal;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  /*-- Bootstrap --*/
+}
+@keyframes scaleWidth_4 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 85%;
+  }
+}
+@-webkit-keyframes scaleWidth_4 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 85%;
+  }
+}
+.services_skills_list_item:nth-of-type(5) {
+  width: 85%;
+  animation: scaleWidth_5 1s ease-out 1s 1 normal;
+  -webkit-animation: scaleWidth_5 1s ease-out 1s 1 normal;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  /*-- MySql --*/
+}
+@keyframes scaleWidth_5 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 85%;
+  }
+}
+@-webkit-keyframes scaleWidth_5 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 85%;
+  }
+}
+.services_skills_list_item:nth-of-type(6) {
+  width: 75%;
+  animation: scaleWidth_6 1s ease-out 1s 1 normal;
+  -webkit-animation: scaleWidth_6 1s ease-out 1s 1 normal;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  /*-- PHP --*/
+}
+@keyframes scaleWidth_6 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@-webkit-keyframes scaleWidth_6 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 75%;
+  }
+}
+.services_skills_list_item:nth-of-type(7) {
+  width: 75%;
+  animation: scaleWidth_7 1s ease-out 1s 1 normal;
+  -webkit-animation: scaleWidth_7 1s ease-out 1s 1 normal;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  /*-- API Rest --*/
+}
+@keyframes scaleWidth_7 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@-webkit-keyframes scaleWidth_7 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 75%;
+  }
+}
+.services_skills_list_item:nth-of-type(8) {
+  width: 70%;
+  animation: scaleWidth_8 1s ease-out 1s 1 normal;
+  -webkit-animation: scaleWidth_8 1s ease-out 1s 1 normal;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  /*-- React --*/
+}
+@keyframes scaleWidth_8 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes scaleWidth_8 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 70%;
+  }
+}
+.services_skills_list_item:nth-of-type(9) {
+  width: 70%;
+  animation: scaleWidth_9 1s ease-out 1s 1 normal;
+  -webkit-animation: scaleWidth_9 1s ease-out 1s 1 normal;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  /*-- UX --*/
+}
+@keyframes scaleWidth_9 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes scaleWidth_9 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 70%;
+  }
+}
+.services_skills_list_item:nth-of-type(10) {
+  width: 50%;
+  animation: scaleWidth_10 1s ease-out 1s 1 normal;
+  -webkit-animation: scaleWidth_10 1s ease-out 1s 1 normal;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  /*-- Scrum --*/
+}
+@keyframes scaleWidth_10 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-webkit-keyframes scaleWidth_10 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 50%;
+  }
+}
 .services_skills_list_item_text {
   display: flex;
   align-items: center;
   background: #ffb86c;
+  width: 100%;
   height: 100%;
   padding-left: 1.5rem;
   color: #f8f8f2;
-  width: 100%;
-  animation: scaleWidth 1s ease-out 1s 1 normal;
-  -webkit-animation: scaleWidth 1s ease-out 1s 1 normal;
-  animation-fill-mode: both;
-  -webkit-animation-fill-mode: both;
-}
-@keyframes scaleWidth {
-  0% {
-    width: 0;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-webkit-keyframes scaleWidth {
-  0% {
-    width: 0;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    width: 100%;
-  }
 }
 
 @media (max-width: 768px) {

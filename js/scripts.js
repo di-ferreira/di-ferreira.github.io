@@ -1,17 +1,16 @@
-//- ScrollTo Element
-// element.scrollTo({
-//    top: 100,
-//    left: 100,
-//    behavior: 'smooth'
-// });
-
-/* scrollTo */
+//- captura os links do menu
 const menuLinks = document.querySelectorAll('.navigation_link[href^="#"]');
+let checkMenuMobile = document.querySelector(".navigation_checkbox");
+const btMenuMobile = document.querySelector(".navigation_button");
 
+//percorre todos os links
 menuLinks.forEach((item) => {
+  //aguarda o evento click para acionar a função scrollTo
   item.addEventListener("click", scrollToSection);
+  item.addEventListener("click", closeNavigationMobile);
 });
 
+/* evento scrollTo do menu */
 function scrollToSection(event) {
   event.preventDefault();
   const to = getScrollToByHref(event.target);
@@ -66,8 +65,7 @@ function smoothScrollTo(endX, endY, duration) {
   }, 1000 / 60); // 60 fps
 }
 
-/* validate form */
-
+/*--- validate form ---*/
 let form = $(".contact_talk_form");
 //console.log(form)
 
@@ -105,3 +103,16 @@ buttonSend.click(
     },
   })
 );
+
+/*--- navigation menu mobile ---*/
+btMenuMobile.addEventListener("click", closeNavigationMobile);
+
+function closeNavigationMobile(event) {
+  event.preventDefault();
+  changeChecked(checkMenuMobile);
+}
+
+function changeChecked(btn) {
+  btn.checked = !btn.checked;
+  //console.log(btn.checked);
+}

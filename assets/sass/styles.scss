@@ -235,7 +235,10 @@ img {
     overflow: hidden;
 
     & img {
-      width: 100px;
+      width: 120px;
+      height: auto;
+      top: -10px;
+      position: absolute;
     }
   }
   &__subtitle {
@@ -527,7 +530,7 @@ img {
     }
     &__img {
       width: 500px;
-      right: 24%;
+      right: 0;
     }
   }
 }

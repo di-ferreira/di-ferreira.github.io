@@ -238,7 +238,10 @@ img {
   overflow: hidden;
 }
 .about__img img {
-  width: 100px;
+  width: 120px;
+  height: auto;
+  top: -10px;
+  position: absolute;
 }
 .about__subtitle {
   font-size: var(--h2-font-size);
@@ -497,7 +500,7 @@ img {
   }
   .home__img {
     width: 500px;
-    right: 24%;
+    right: 0;
   }
 }
 

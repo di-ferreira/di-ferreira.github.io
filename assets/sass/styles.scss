@@ -212,9 +212,9 @@ img {
 
   &__img {
     position: absolute;
-    right: 0;
+    right: 24%;
     bottom: 0;
-    width: 295px;
+    width: 375px;
   }
 }
 
@@ -406,7 +406,14 @@ img {
 /* For small devices */
 @media screen and (max-width: 320px) {
   .home__img {
+    right: 0;
     width: 230px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home__img {
+    right: 0;
   }
 }
 
@@ -459,8 +466,8 @@ img {
       row-gap: 0;
     }
     &__img {
-      width: 524px;
-      right: 10%;
+      width: 365px;
+      right: 5%;
     }
   }
 
@@ -530,7 +537,7 @@ img {
     }
     &__img {
       width: 500px;
-      right: 0;
+      right: 15%;
     }
   }
 }

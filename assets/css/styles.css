@@ -299,12 +299,82 @@ img {
 .portfolio__img {
   position: relative;
   overflow: hidden;
-}
-.portfolio__img img {
   border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 .portfolio__img:hover .portfolio__link {
   bottom: 0;
+}
+.portfolio__post {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.portfolio__post:hover .portfolio__link {
+  bottom: 0;
+}
+.portfolio__modal {
+  position: relative;
+  display: flex;
+  width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;
+  color: var(--dark-color);
+  background-color: var(--white-color);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.portfolio__modal__img {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin-right: 1.5rem;
+}
+.portfolio__modal__img img {
+  width: 100%;
+  margin: 0.5rem 0;
+  height: fit-content;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.portfolio__modal__description {
+  width: 50%;
+}
+.portfolio__modal__description h1 {
+  font-size: 2.5rem;
+  color: var(--first-color);
+}
+.portfolio__modal__description p {
+  font-size: 1.1rem;
+}
+.portfolio__modal__link {
+  color: var(--first-color);
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+.portfolio__modal__link:hover {
+  text-decoration: underline;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 .portfolio__link {
   position: absolute;
@@ -493,10 +563,29 @@ img {
     justify-items: center;
   }
 }
+@media screen and (max-width: 768px) {
+  .portfolio__modal {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .portfolio__modal__img {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+  .portfolio__modal__description {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .portfolio__modal {
+    width: 90%;
   }
 }
 /* For tall screens on mobiles y desktop*/
